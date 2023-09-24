@@ -1,4 +1,4 @@
-const ReusableForm = ({formTitle, handleSubmit, submitBtnText}) => {
+const ReusableForm = ({handleSubmit, submitBtnText, children}) => {
     const handleLocalSubmit = (e) =>{
         e.preventDefault();
         const data = {
@@ -12,7 +12,7 @@ const ReusableForm = ({formTitle, handleSubmit, submitBtnText}) => {
     return (
         <div>
             
-            <h2>{formTitle} </h2>
+             {children}
              <form onSubmit={handleLocalSubmit}>
                 <input  type="text" name="name" id="name" />
                 <br />

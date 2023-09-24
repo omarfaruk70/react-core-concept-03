@@ -22,8 +22,14 @@ function App() {
      {/* using custom hook  */}
      {/* <HookForm></HookForm> */}
 
-     <ReusableForm formTitle='Sign In' submitBtnText='Sign In' handleSubmit={handleSignIn}></ReusableForm>
-     <ReusableForm formTitle='Log In' submitBtnText='LogIn' handleSubmit={handleLogIn}></ReusableForm>
+     <ReusableForm  handleSubmit={handleSignIn}>
+      <h2>Please sign in </h2>
+      <p>Keep sing in and keep rocking</p>
+     </ReusableForm>
+     <ReusableForm  handleSubmit={handleLogIn}>
+      <h2>Log in</h2>
+      <p>Log in right now</p>
+     </ReusableForm>
       
     </>
   )
